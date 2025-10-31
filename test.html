@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Widget Test - GitHub Pages</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: rgba(255,255,255,0.1);
+        padding: 40px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+      }
+      .status {
+        background: rgba(0,255,0,0.2);
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border: 2px solid rgba(0,255,0,0.3);
+      }
+      .code {
+        background: rgba(0,0,0,0.3);
+        padding: 15px;
+        border-radius: 8px;
+        font-family: 'Courier New', monospace;
+        margin: 15px 0;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🚀 Chatbot Widget - GitHub Pages Test</h1>
+      
+      <div class="status">
+        <h2>✅ Widget Status</h2>
+        <p>This page is loading the widget from GitHub Pages. Look for the chat button in the bottom-right corner!</p>
+      </div>
+
+      <h2>📋 Integration Code</h2>
+      <p>To add this widget to any website, use:</p>
+      <div class="code">
+&lt;script src="https://raphaelfeliz.github.io/launch-iframe/widget.js" async&gt;&lt;/script&gt;
+      </div>
+
+      <h2>🎯 Features</h2>
+      <ul>
+        <li>✅ Double-load protection</li>
+        <li>✅ Custom iframe URL support via <code>data-bot</code> attribute</li>
+        <li>✅ Improved error handling</li>
+        <li>✅ Accessibility attributes</li>
+        <li>✅ Proper GitHub Pages hosting</li>
+      </ul>
+
+      <h2>🔧 Custom Bot URL</h2>
+      <p>To use a different bot URL, add the <code>data-bot</code> attribute:</p>
+      <div class="code">
+&lt;script 
+  src="https://raphaelfeliz.github.io/launch-iframe/widget.js" 
+  async 
+  data-bot="https://your-custom-bot-url.com/"&gt;
+&lt;/script&gt;
+      </div>
+
+      <h2>📱 Test Instructions</h2>
+      <ol>
+        <li>Look for the blue chat button (💬) in the bottom-right corner</li>
+        <li>Click it to open the 800px wide chat panel</li>
+        <li>The panel should slide in from the right smoothly</li>
+        <li>Click the × button or chat button again to close</li>
+        <li>Check browser console for any errors</li>
+      </ol>
+    </div>
+
+    <!-- Load the widget from GitHub Pages -->
+    <script src="https://raphaelfeliz.github.io/launch-iframe/widget.js" async></script>
+  </body>
+</html>
