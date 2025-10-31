@@ -3,7 +3,9 @@
   if (window.__chatbotWidgetLoaded) return;
   window.__chatbotWidgetLoaded = true;
 
-  console.log('Chatbot widget script loaded');
+  // VERSION LOG - Updated: 2025-10-31 11:35 - Mobile hidden (<=768px)
+  console.log('Chatbot widget v1.2.0 loaded - Mobile hidden version');
+  console.log('Widget script loaded');
 
   function initWidget() {
     if (!document.body) {
