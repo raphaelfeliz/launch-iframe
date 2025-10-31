@@ -17,6 +17,7 @@
 
     // Create the chat launcher button
     const chatButton = document.createElement('button');
+    chatButton.id = 'chatbot-widget-button';
     chatButton.innerText = '💬';
     chatButton.style.cssText = `
       position: fixed;
@@ -41,6 +42,7 @@
 
     // Create the chat container
     const chatContainer = document.createElement('div');
+    chatContainer.id = 'chatbot-widget-container';
     chatContainer.style.cssText = `
       /* Common styles */
       top: 0;
