@@ -1,0 +1,16 @@
+{
+  "name": "chatbot-widget",
+  "version": "1.0.0",
+  "description": "A simple chatbot widget that opens a full-height div on button click.",
+  "main": "src/widget.js",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [
+    "chatbot",
+    "widget",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
