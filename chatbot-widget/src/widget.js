@@ -1,7 +1,17 @@
 (function() {
     // Avoid conflicts with existing variables
+    console.log('Chatbot widget script loaded');
     
-    // Create the chatbot button
+    // Ensure DOM is ready
+    function initWidget() {
+        console.log('Initializing chatbot widget...');
+        
+        if (!document.body) {
+            console.error('document.body not available');
+            return;
+        }
+        
+        // Create the chatbot button
     const chatButton = document.createElement('button');
     chatButton.innerText = '💬';
     chatButton.style.cssText = `
@@ -79,6 +89,8 @@
     document.body.appendChild(chatButton);
     document.body.appendChild(chatContainer);
     
+    console.log('Chat button and container added to DOM');
+    
     // State management
     let isOpen = false;
     
@@ -107,4 +119,14 @@
         if (!isOpen) this.style.transform = 'scale(1)';
     });
     
+    console.log('Chatbot widget initialized successfully');
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWidget);
+} else {
+    initWidget();
+}
+
 })();
