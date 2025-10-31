@@ -7,7 +7,7 @@ A simple, embeddable chatbot widget that adds a floating chat button to any webs
 Add this single line to any HTML page:
 
 ```html
-<script src="https://raphaelfeliz.github.io/launch-iframe/widget.js" async></script>
+<script src="https://raphaelfeliz.github.io/launch-iframe/widget-production.js" async></script>
 ```
 
 That's it! The widget will automatically appear with a floating chat button in the bottom-right corner.
@@ -74,7 +74,7 @@ To use a different bot/iframe URL:
 
 ## 🔗 URLs
 
-- **Production widget**: `https://raphaelfeliz.github.io/launch-iframe/widget.js`
+- **Production widget**: `https://raphaelfeliz.github.io/launch-iframe/widget-production.js`
 - **GitHub repository**: `https://github.com/raphaelfeliz/launch-iframe`
 - **Raw file**: `https://raw.githubusercontent.com/raphaelfeliz/launch-iframe/main/widget.js`
 
