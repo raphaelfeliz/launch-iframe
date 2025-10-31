@@ -49,7 +49,7 @@
       width: 100%;
       max-width: 800px;
       background-color: #3c434f;
-      z-index: 9998;
+      z-index: 9999;
       box-sizing: border-box;
       transition: right 0.3s ease, transform 0.3s ease;
       box-shadow: 0 0 30px rgba(0,0,0,0.2);
@@ -88,7 +88,7 @@
       cursor: pointer;
       font-size: 18px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      z-index: 10001;
+      z-index: 9999;
       display: flex;
       align-items: center;
       justify-content: center;
