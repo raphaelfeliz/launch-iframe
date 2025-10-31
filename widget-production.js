@@ -104,19 +104,13 @@
       const isMobile = window.innerWidth <= 768;
       
       if (isMobile) {
-        // --- MOBILE: Absolute, 250dvh, Centered ---
-        chatContainer.style.position = 'absolute';
-        chatContainer.style.height = '250dvh';
-        chatContainer.style.left = '50%';
-        chatContainer.style.right = 'auto';
-        
-        if (isOpen) {
-          chatContainer.style.transform = 'translateX(-50%)'; // Show
-        } else {
-          chatContainer.style.transform = 'translateX(-50%) translateY(-100%)'; // Hide (slide up)
-        }
+        // --- MOBILE: Hide widget completely ---
+        chatButton.style.display = 'none';
+        chatContainer.style.display = 'none';
       } else {
         // --- DESKTOP: Fixed, 100vh, Right-aligned ---
+        chatButton.style.display = 'flex';
+        chatContainer.style.display = 'block';
         chatContainer.style.position = 'fixed';
         chatContainer.style.height = '100vh';
         chatContainer.style.left = 'auto';
