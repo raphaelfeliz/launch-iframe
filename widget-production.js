@@ -74,10 +74,10 @@
         /* --- Close Button Styling --- */
         #widget-close {
             position: absolute;
-            top: 12px;
-            right: 12px;
-            width: 32px;
-            height: 32px;
+            top: 7px;
+            right: 7px;
+            width: 15px;
+            height: 15px;
             background-color: #e0e0e0;
             color: #555;
             border: none;
@@ -89,11 +89,13 @@
             font-weight: bold;
             font-size: 16px;
             z-index: 2147483647; /* above iframe within container */
-            transition: background-color 0.2s;
+            opacity: 0.5; /* 50% transparent by default */
+            transition: background-color 0.2s, opacity 0.2s;
         }
 
         #widget-close:hover {
             background-color: #cccccc;
+            opacity: 1; /* no transparency on hover */
         }
     `;
 
