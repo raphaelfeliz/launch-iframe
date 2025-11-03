@@ -16,7 +16,7 @@
             top: 0;
             left: 0;
             border-radius: 0;
-            z-index: 2147483647; /* max int z-index to ensure topmost */
+            z-index: 1000;
         }
 
         /* Desktop Overrides */
@@ -49,7 +49,7 @@
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             transition: all 0.2s ease-in-out;
-            z-index: 2147483646; /* slightly below container */
+            z-index: 999;
             border: none;
         }
 
@@ -74,10 +74,10 @@
         /* --- Close Button Styling --- */
         #widget-close {
             position: absolute;
-            top: 7px;
-            right: 7px;
-            width: 15px;
-            height: 15px;
+            top: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
             background-color: #e0e0e0;
             color: #555;
             border: none;
@@ -88,14 +88,12 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 16px;
-            z-index: 2147483647; /* above iframe within container */
-            opacity: 0.5; /* 50% transparent by default */
-            transition: background-color 0.2s, opacity 0.2s;
+            z-index: 1001;
+            transition: background-color 0.2s;
         }
 
         #widget-close:hover {
             background-color: #cccccc;
-            opacity: 1; /* no transparency on hover */
         }
     `;
 
@@ -113,7 +111,7 @@
             <button id="widget-close" aria-label="Close chat widget">&times;</button>
             <iframe 
                 id="widget-iframe"
-                src="https://hybrid-product-advisor-widget-v3-632357271427.us-west1.run.app/"
+                src="https://hybrid-product-advisor-widget-v3-1-253278659379.us-west1.run.app/"
                 title="Product Advisor Widget">
             </iframe>
         </div>
