@@ -16,7 +16,7 @@
             top: 0;
             left: 0;
             border-radius: 0;
-            z-index: 1000;
+            z-index: 2147483647;
         }
 
         /* Desktop Overrides */
@@ -49,7 +49,7 @@
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             transition: all 0.2s ease-in-out;
-            z-index: 999;
+            z-index: 2147483646;
             border: none;
         }
 
@@ -88,7 +88,7 @@
             cursor: pointer;
             font-weight: bold;
             font-size: 16px;
-            z-index: 1001;
+            z-index: 2147483647;
             transition: background-color 0.2s;
         }
 
