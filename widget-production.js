@@ -1,8 +1,11 @@
+// WIDGET TEMPORARILY OFFLINE
+/*
 (function() {
     // This is an IIFE (Immediately Invoked Function Expression)
     // It runs immediately and keeps variables private from the host page.
 
     // 1. Define the CSS styles as a string
+    
     const styles = `
         /* --- Widget Container Styling --- */
         #widget-container {
@@ -164,3 +167,4 @@
     }
 
 })();
+*/
