@@ -39,7 +39,7 @@
         /* --- Launcher Button --- */
         #widget-launcher {
             position: fixed;
-            bottom: 24px;
+            bottom: 24px; /* Default: Bottom-Right (Mobile) */
             right: 24px;
             width: 60px;
             height: 60px;
@@ -55,6 +55,42 @@
             z-index: 2147483648; /* Above the container */
             border: none;
             outline: none;
+            animation: widget-pulse 7s infinite;
+        }
+
+        /* Desktop Overrides: Top-Right Launcher */
+        @media (min-width: 768px) {
+            #widget-launcher {
+                bottom: auto;
+                top: 24px;
+            }
+        }
+
+        @keyframes widget-pulse {
+            0% {
+                transform: scale(1);
+                background-color: ${CONFIG.themeColor};
+            }
+            5% {
+                transform: scale(1.1);
+                background-color: #3395ff;
+            }
+            10% {
+                transform: scale(1);
+                background-color: ${CONFIG.themeColor};
+            }
+            15% {
+                transform: scale(1.1);
+                background-color: #3395ff;
+            }
+            20% {
+                transform: scale(1);
+                background-color: ${CONFIG.themeColor};
+            }
+            100% {
+                transform: scale(1);
+                background-color: ${CONFIG.themeColor};
+            }
         }
 
         #widget-launcher:hover {
