@@ -131,37 +131,47 @@
     /* Launcher Content Wrapper */
     .launcher-content {
         display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    white-space: nowrap;
-                }
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 
     /* Icon Styling */
     .launcher-icon {
         width: 28px;
-    height: 28px;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-                }
+        height: 28px;
+        flex-shrink: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 1;
+        position: relative;
+        z-index: 5;
+    }
+
+    .launcher-icon.is-fading {
+        opacity: 0;
+        transform: scale(0.5);
+    }
 
     /* Text Label (Hidden by default) */
     .launcher-label {
-        max - width: 0;
-    opacity: 0;
-    margin-left: 0;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-                }
+        max-width: 0;
+        opacity: 0;
+        margin-left: 0;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 
     /* Show Text on Hover */
-    /* Increased max-width to allow full text display */
     #widget-launcher:hover .launcher-label {
-        max - width: 200px;
-    opacity: 1;
-    margin-left: 10px;
-                }
+        max-width: 200px;
+        opacity: 1;
+        margin-left: 10px;
+    }
 
     #widget-launcher.is-hidden {
         opacity: 0;
@@ -324,8 +334,7 @@
                 const theme = THEMES[currentThemeIndex];
 
                 // Fade out icon
-                iconContainer.style.transform = 'scale(0.5)';
-                iconContainer.style.opacity = '0';
+                iconContainer.classList.add('is-fading');
 
                 setTimeout(() => {
                     // Change Icon, Text, and Background
@@ -334,9 +343,8 @@
                     launcher.style.background = theme.gradient;
 
                     // Fade in icon
-                    iconContainer.style.transform = 'scale(1)';
-                    iconContainer.style.opacity = '1';
-                }, 200);
+                    iconContainer.classList.remove('is-fading');
+                }, 300);
             }
         }, 3000); // Change every 3 seconds
     }
