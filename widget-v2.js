@@ -46,8 +46,8 @@
                 }
 
     @media (min-width: 768px) {
-        #widget - container {
-        width: 60%;
+        #widget-container {
+        width: 50%;
     max-width: 100%;
     box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
                     }
@@ -330,6 +330,7 @@
         setInterval(() => {
             // Only cycle if not hovering (to avoid jarring changes during interaction)
             if (!launcher.matches(':hover') && !launcher.classList.contains('is-hidden')) {
+                currentThemeIndex = (currentThemeIndex + 1) % THEMES.length;
                 currentThemeIndex = (currentThemeIndex + 1) % THEMES.length;
                 const theme = THEMES[currentThemeIndex];
 
