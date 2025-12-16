@@ -229,14 +229,19 @@
                 }
 
     @media (max-width: 767px) {
-        #widget - close {
-        left: auto;
-    right: 15px;
-    top: 15px;
-    background-color: transparent;
-    box-shadow: none;
-                      }
-                }
+        #widget-close {
+            left: auto;
+            right: 15px;
+            top: 15px;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        #widget-launcher {
+            right: 35px;
+            bottom: 35px;
+        }
+    }
 
     #widget-iframe {
         width: 100%;

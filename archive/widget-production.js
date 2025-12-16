@@ -47,7 +47,7 @@
 
     @media (min-width: 768px) {
         #widget-container {
-        width: 50%;
+        width: 60%;
     max-width: 100%;
     box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
                     }
