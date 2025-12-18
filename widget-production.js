@@ -1,4 +1,3 @@
-
 (function () {
     // Widget Configuration
     const CONFIG = {
@@ -28,105 +27,105 @@
     /* --- Widget Container (Drawer) --- */
     #widget-container {
         position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
-    z-index: 2147483647;
-    transform: translateX(100%);
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    display: flex;
-    flex-direction: column;
-                }
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+        z-index: 2147483647;
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        display: flex;
+        flex-direction: column;
+    }
 
     #widget-container.is-open {
         transform: translateX(0);
-                }
+    }
 
     @media (min-width: 768px) {
         #widget-container {
-        width: 50%;
-    max-width: 100%;
-    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
-                    }
-                }
+            width: 50%;
+            max-width: 100%;
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+        }
+    }
 
     /* --- Launcher Button --- */
     #widget-launcher {
         position: fixed;
-    bottom: 40px;
-    right: 80px; /* Increased right margin even more */
-    width: 60px;
-    height: 60px;
-    /* Gradient Background */
-    background: ${THEMES[0].gradient};
-    color: white;
-    border-radius: 30px; /* Fully rounded initially */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Transitions for hover expansion, opacity, and background change */
-    transition: width 0.3s ease, background 0.5s ease, transform 0.3s ease, opacity 0.5s ease;
-    z-index: 2147483648;
-    border: none;
-    outline: none;
+        bottom: 40px;
+        right: 80px; /* Increased right margin even more */
+        width: 60px;
+        height: 60px;
+        /* Gradient Background */
+        background: ${THEMES[0].gradient};
+        color: white;
+        border-radius: 30px; /* Fully rounded initially */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        /* Transitions for hover expansion, opacity, and background change */
+        transition: width 0.3s ease, background 0.5s ease, transform 0.3s ease, opacity 0.5s ease;
+        z-index: 2147483648;
+        border: none;
+        outline: none;
 
-    /* Entrance Animation: Start invisible and translated down */
-    opacity: 0;
-    transform: translateY(20px) scale(0.8);
-    pointer-events: none;
-                }
+        /* Entrance Animation: Start invisible and translated down */
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+        pointer-events: none;
+    }
 
     /* Active/Visible State (Triggered after 5s) */
     #widget-launcher.is-visible {
         opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events: auto;
-    /* Only animate "bobbing" once visible */
-    animation: widget-bob 8s infinite ease-in-out; 
-                }
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+        /* Only animate "bobbing" once visible */
+        animation: widget-bob 8s infinite ease-in-out; 
+    }
 
     /* Bobbing Animation: Quick move, then wait */
     @keyframes widget-bob {
-        0 %, 5 % { transform: translateY(0); }
-                    10% {transform: translateY(-10px); }
-    15% {transform: translateY(0); }
-    20% {transform: translateY(-5px); }
-    25% {transform: translateY(0); }
-    100% {transform: translateY(0); } /* Wait for the rest */
-                }
+        0%, 5% { transform: translateY(0); }
+        10% { transform: translateY(-10px); }
+        15% { transform: translateY(0); }
+        20% { transform: translateY(-5px); }
+        25% { transform: translateY(0); }
+        100% { transform: translateY(0); } /* Wait for the rest */
+    }
 
     /* Ripple Effect */
     #widget-launcher::before {
         content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    background: inherit;
-    z-index: -1;
-    opacity: 0.6;
-    animation: widget-ripple 2s infinite;
-                }
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background: inherit;
+        z-index: -1;
+        opacity: 0.6;
+        animation: widget-ripple 2s infinite;
+    }
 
     @keyframes widget-ripple {
-        0 % { transform: scale(1); opacity: 0.6; }
-                    100% {transform: scale(1.6); opacity: 0; }
-                }
+        0% { transform: scale(1); opacity: 0.6; }
+        100% { transform: scale(1.6); opacity: 0; }
+    }
 
     /* Hover State: Expand */
     /* Increased width to fit longer Portuguese text like "Fale com Especialista" */
     #widget-launcher:hover {
         width: 260px;
-    /* Pause bobbing on hover so it doesn't look jittery */
-    animation-play-state: paused; 
-                }
+        /* Pause bobbing on hover so it doesn't look jittery */
+        animation-play-state: paused; 
+    }
 
     /* Launcher Content Wrapper */
     .launcher-content {
@@ -175,66 +174,66 @@
 
     #widget-launcher.is-hidden {
         opacity: 0;
-    pointer-events: none;
-    transform: scale(0.8);
-                }
+        pointer-events: none;
+        transform: scale(0.8);
+    }
 
     /* --- Notification Badge --- */
     #widget-notification {
         position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 16px;
-    height: 16px;
-    background-color: #ff3b30;
-    border: 2px solid white;
-    border-radius: 50%;
-    /* Hidden initially */
-    opacity: 0;
-    transform: scale(0);
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
-    z-index: 10;
-                }
+        top: -2px;
+        right: -2px;
+        width: 16px;
+        height: 16px;
+        background-color: #ff3b30;
+        border: 2px solid white;
+        border-radius: 50%;
+        /* Hidden initially */
+        opacity: 0;
+        transform: scale(0);
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+        z-index: 10;
+    }
 
     #widget-notification.is-active {
         opacity: 1;
-    transform: scale(1);
-                }
+        transform: scale(1);
+    }
 
     /* --- Close Button --- */
     #widget-close {
         position: absolute;
-    top: 15px;
-    left: -50px;
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    color: #333;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    z-index: 2147483649;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-                }
+        top: 15px;
+        left: -50px;
+        width: 30px;
+        height: 30px;
+        background-color: white; /* Ensure white background on all devices */
+        color: #333;
+        border: 2px solid #14293D; /* Added requested border */
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 2147483649;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
 
     #widget-container.is-open #widget-close {
         opacity: 1;
-    pointer-events: auto;
-                }
+        pointer-events: auto;
+    }
 
     @media (max-width: 767px) {
         #widget-close {
             left: auto;
             right: 15px;
-            top: 15px;
-            background-color: transparent;
-            box-shadow: none;
+            top: 5px; /* Updated: touches top with 5px margin */
+            /* Removed transparent background override so it stays white */
+            /* Removed box-shadow: none so it keeps the shadow or border visibility */
         }
 
         #widget-launcher {
@@ -245,10 +244,10 @@
 
     #widget-iframe {
         width: 100%;
-    height: 100%;
-    border: none;
-    flex: 1;
-                }
+        height: 100%;
+        border: none;
+        flex: 1;
+    }
     `;
 
     // HTML Structure
@@ -267,7 +266,7 @@
     const containerHTML = `
     <div id="widget-container">
         <button id="widget-close" aria-label="Close chat widget">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
