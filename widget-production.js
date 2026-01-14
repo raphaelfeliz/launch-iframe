@@ -1,7 +1,7 @@
 (function () {
     // Widget Configuration
     const CONFIG = {
-        iframeUrl: 'https://chat-first-commerce.web.app/',
+        iframeUrl: 'https://chatfirst-2026.web.app/',
         // Default theme, though we will override this with gradients
         themeColor: '#007aff',
     };
